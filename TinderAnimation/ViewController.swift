@@ -68,13 +68,18 @@ class ViewController: UIViewController {
     @objc func resetButton(){
         
         self.index = self.index + 1
-        let card = self.viewsArray[self.index]
-        print(card.tag)
-        UIView.animate(withDuration: 0.2) {
-            card.center = self.view.center
-            card.transform = CGAffineTransform.identity
-            card.alpha = 1
+        if self.index <= self.viewsArray.count - 1{
+            let card = self.viewsArray[self.index]
+            print(card.tag)
+            UIView.animate(withDuration: 0.2) {
+                card.center = self.view.center
+                card.transform = CGAffineTransform.identity
+                card.alpha = 1
+            }
+        }else{
+            self.index = self.index - 1
         }
+        
     }
 
     @objc func panGesture(gesture:UIPanGestureRecognizer){
@@ -85,6 +90,7 @@ class ViewController: UIViewController {
             card?.center = CGPoint(x: self.view.center.x + point.x, y: self.view.center.y + point.y)
         }
 
+        
         let xFromCenter = (card?.center.x)! - view.center.x
         card?.transform = CGAffineTransform(rotationAngle: xFromCenter / divisor)
 
