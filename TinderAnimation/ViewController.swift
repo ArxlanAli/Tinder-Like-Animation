@@ -26,12 +26,20 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         return view
     }()
+    let button:UIButton = {
+        let but = UIButton()
+        but.translatesAutoresizingMaskIntoConstraints = false
+        but.setTitleColor(.black, for: .normal)
+        but.setTitle("Move to Next", for: .normal)
+        return but
+    }()
     var divisor:CGFloat!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(containerView)
         view.addSubview(swipeback)
+        view.addSubview(button)
         containerView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         containerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
@@ -41,6 +49,11 @@ class ViewController: UIViewController {
         swipeback.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant:250).isActive = true
         swipeback.addTarget(self, action: #selector(resetButton), for: .touchUpInside)
         swipeback.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        button.topAnchor.constraint(equalTo: swipeback.bottomAnchor,constant:30).isActive = true
+        button.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        button.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        button.addTarget(self, action: #selector(nextScreen), for: .touchUpInside)
         divisor = (view.frame.width / 2) / 0.61
         //var constant:CGFloat = 0.0
         
@@ -65,6 +78,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    @objc func nextScreen(){
+        present(SecondViewController(), animated: true, completion: nil)
+    }
     @objc func resetButton(){
         
         self.index = self.index + 1

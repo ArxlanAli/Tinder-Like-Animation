@@ -14,6 +14,7 @@
 		F54B414E20373FA0002D217A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54B414C20373FA0002D217A /* LaunchScreen.storyboard */; };
 		F54B415920373FA0002D217A /* TinderAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B415820373FA0002D217A /* TinderAnimationTests.swift */; };
 		F54B416420373FA0002D217A /* TinderAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B416320373FA0002D217A /* TinderAnimationUITests.swift */; };
+		F570FA3120383CBF0011730E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570FA3020383CBF0011730E /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F54B415F20373FA0002D217A /* TinderAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54B416320373FA0002D217A /* TinderAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderAnimationUITests.swift; sourceTree = "<group>"; };
 		F54B416520373FA0002D217A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F570FA3020383CBF0011730E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				F54B414520373FA0002D217A /* ViewController.swift */,
 				F54B414720373FA0002D217A /* Main.storyboard */,
 				F54B414A20373FA0002D217A /* Assets.xcassets */,
+				F570FA3020383CBF0011730E /* SecondViewController.swift */,
 				F54B414C20373FA0002D217A /* LaunchScreen.storyboard */,
 				F54B414F20373FA0002D217A /* Info.plist */,
 			);
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F570FA3120383CBF0011730E /* SecondViewController.swift in Sources */,
 				F54B414620373FA0002D217A /* ViewController.swift in Sources */,
 				F54B414420373FA0002D217A /* AppDelegate.swift in Sources */,
 			);
